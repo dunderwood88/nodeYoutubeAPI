@@ -10,7 +10,7 @@ exports.login = function(req, res){
     res.redirect('https://accounts.google.com/o/oauth2/auth?' + 
         querystring.stringify(
             {
-            'client_id': '167972939584-qjimt0ss1qkfosnrsrclvjao88maa6tu.apps.googleusercontent.com',
+            'client_id': cfg.client_id,
             'redirect_uri': 'http://localhost:8080/loginredirect',
             'scope': 'https://www.googleapis.com/auth/youtube', 
             'response_type': 'code',
@@ -23,22 +23,6 @@ exports.login = function(req, res){
 
 exports.loginRedirect = function(req, res){
     
-    /*const options = {
-        method: 'POST',
-        url: 'https://accounts.google.com/o/oauth2/token',
-        headers:{
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Host': 'accounts.google.com'
-        },
-        body:{
-            'code': req.query.code,
-            'client_id': '167972939584-qjimt0ss1qkfosnrsrclvjao88maa6tu.apps.googleusercontent.com',
-            'client_secret': 'JttGNiIsUp-B2mlVcB6S9pYe',
-            'redirect_uri': 'http://localhost:8080/playlist',
-            'grant_type': 'authorization_code'
-        },
-        json:true
-    }*/
     var url = 'https://accounts.google.com/o/oauth2/token';
     var body = {
             'code': req.query.code,

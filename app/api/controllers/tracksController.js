@@ -17,7 +17,7 @@ exports.search = function(req, res){
             //this is the search query passed to the current API
             'q': req.params.search_term,
             'type': 'video',
-            'key': 'AIzaSyAnVjZlopFhCkCvujTz-NOCcR9cibTT3pc'
+            'key': cfg.api_key
             },
         json: true
     }
@@ -50,12 +50,12 @@ exports.add = function(req, res){
                     'kind': 'youtube#video',
                     'videoId': req.params.track_id
                 },
-                'playlistId': 'PLoa3iNVJ9HVWysuqeh9OMVCn1SwZDQpjQ'
+                'playlistId': cfg.playlist_id
             
             },
             
             
-            'key': 'AIzaSyAnVjZlopFhCkCvujTz-NOCcR9cibTT3pc'
+            'key': cfg.api_key
         },
         json:true
     }
