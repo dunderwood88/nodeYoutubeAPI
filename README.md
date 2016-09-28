@@ -8,7 +8,7 @@ Run app using node server.js and then navigate to http://localhost:8080/ to logi
 
 Once config settings are defined users can use API to search tracks and submit to the common playlist:
 
-GET: http://localhost:8080/api/tracks/search/<artist-name>
-POST: http://localhost:8080/api/tracks/add/<video-id>
+GET: http://localhost:8080/api/tracks/search/#artist-name#
+POST: http://localhost:8080/api/tracks/add/#video-id#
 
 Pretty basic at the mo, very much a work in progress!
